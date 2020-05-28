@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 declare var google: any;
 @Component({
@@ -10,7 +11,7 @@ export class HomePage {
   map: any;
   @ViewChild('map', {read: ElementRef, static: false}) mapRaf: ElementRef; 
 
-  constructor() {}
+  constructor(private geolocation: Geolocation)  {}
 
   public showMap(){
     const location = new google.maps.LatLng(-22.489130, -48.546436);
@@ -24,4 +25,7 @@ export class HomePage {
   ionViewDidEnter(){
     this.showMap();
   }    
+
+  publc async 
+
 }
