@@ -31,7 +31,7 @@ export class HomePage {
       disableDeFaultUI: true
     }
     this.map == new google.maps.Map(this.mapRaf.nativeElement, options)
-    const marcador = new google.maps.Manker({
+    const marcador = new google.maps.Marker({
       position: this.posicaoAtual, 
       map: this.map,
       tittle: "Esta aqui vós merce",
@@ -39,7 +39,7 @@ export class HomePage {
       animation: google.maps.Animation.DROP
     });
 
-    const local1 = new google.maps.local1({
+    const local1 = new google.maps.Marker({
         position: new google.maps.LatLng(-22.495713, -48.551065),
         map: this.map,
         title: "Aqui tem Lanche foda",
@@ -47,7 +47,7 @@ export class HomePage {
         icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
         animation: google.maps.Animation.BOUNCE
     });
-    const local2 = new google.maps.local2({
+    const local2 = new google.maps.Marker({
         position: new google.maps.LatLng(-22.499467, -48.555141),
         map: this.map,
         title: "Cabeleireiro foda",
@@ -55,16 +55,16 @@ export class HomePage {
         icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
         animation: google.maps.Animation.BOUNCE
     });
-    const local3 = new google.maps.local3({
+    const local3 = new google.maps.Marker({
         position: new google.maps.LatLng(-22.499327, -48.563401),
         map: this.map,
         title: "Não pode vim aqui",
         //colocar ícones
-        icon: 'https://maps.google.com/mapfiles/ms/icons/r-dot.png',
+        icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
         animation: google.maps.Animation.BOUNCE
     });
 
-    const local4 = new google.maps.local4({
+    const local4 = new google.maps.Marker({
         position: new google.maps.LatLng(-22.495730, -48.566072),
         map: this.map,
         title: "Se estiver aqui não é um bm sinal",
@@ -72,7 +72,7 @@ export class HomePage {
         icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
         animation: google.maps.Animation.BOUNCE
     });
-    const local5 = new google.maps.local5({
+    const local5 = new google.maps.Marker({
         position: new google.maps.LatLng(-22.494514, -48.558450),
         map: this.map,
         title: "Boom de mais o lanche daqui, só cuidado ao pedir ao ponto, as vezes vem mal passado",
