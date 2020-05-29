@@ -60,7 +60,7 @@ export class HomePage {
         map: this.map,
         title: "Não pode vim aqui",
         //colocar ícones
-        icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
+        icon: 'https://maps.google.com/mapfiles/ms/icons/r-dot.png',
         animation: google.maps.Animation.BOUNCE
     });
 
@@ -75,7 +75,7 @@ export class HomePage {
     const local5 = new google.maps.local5({
         position: new google.maps.LatLng(-22.494514, -48.558450),
         map: this.map,
-        title: "Boom de mais o lanche daqui, só cuidado ao pedir ao ponto, as vezes vem mal passad",
+        title: "Boom de mais o lanche daqui, só cuidado ao pedir ao ponto, as vezes vem mal passado",
         //colocar ícones
         icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
         animation: google.maps.Animation.BOUNCE
