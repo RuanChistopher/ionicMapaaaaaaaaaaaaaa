@@ -30,7 +30,7 @@ export class HomePage {
       zoom: 15,
       disableDeFaultUI: true
     }
-    this.map == new google.maps.Map(this.mapRaf.nativeElement, options)
+    this.map  new google.maps.Map(this.mapRaf.nativeElement, options)
     const marcador = new google.maps.Marker({
       position: this.posicaoAtual, 
       map: this.map,
