@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Ilocal } from '../interfaces/Ilocal';
 
 declare var google: any;
 
@@ -17,6 +18,13 @@ export class HomePage {
   local4: any;
   local5: any;
 
+public listaLocais: Ilocal[] = [
+{
+  lat:-22.488686,
+  lng:-48.546568,
+  titulo:"Carinho de lanche gostoso hmmm"
+}
+]
   @ViewChild('map', {read: ElementRef, static: false}) mapRaf: ElementRef; 
 
   constructor(private geolocation: Geolocation)  {}
@@ -30,7 +38,7 @@ export class HomePage {
       zoom: 15,
       disableDeFaultUI: true
     }
-    this.map  new google.maps.Map(this.mapRaf.nativeElement, options)
+    this.map = new google.maps.Map(this.mapRaf.nativeElement, options)
     const marcador = new google.maps.Marker({
       position: this.posicaoAtual, 
       map: this.map,
@@ -80,12 +88,26 @@ export class HomePage {
         icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
         animation: google.maps.Animation.BOUNCE
     });
-
+    for(let local of this.listaLocais){
+      this.adicionarMarcador(local);
+    }
 
   }
   ionViewDidEnter(){
     this.showMap();
   }    
+
+  private adicionarMarcador(local: Ilocal){
+    const {lag, lng, titulo} = local;
+    const marcador = new google.maps.Marker({
+        position: [lag, lng],
+        map: this.map,
+        title: titulo
+       
+        
+    });
+
+  }
 
   public async buscaPosicao(){
     await this.geolocation.getCurrentPosition().then((resp) => {
